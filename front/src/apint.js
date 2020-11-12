@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apint = axios.create({
-    baseURL: 'http://localhost:3003/'
+    baseURL: 'https://portfoliotweb.herokuapp.com/'
 });
 
 export default apint;

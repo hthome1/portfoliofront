@@ -1,6 +1,7 @@
 import './App.css';
 import Inicial from './Inicial'
 import Carteira from './carteira'
+import apint from './apint'
 import React, { Component } from "react"
 import axios from 'axios'
 import { BrowserRouter } from 'react-router-dom';
@@ -34,7 +35,7 @@ submitHandler = e => {
   e.preventDefault()
   console.log(this.state)
 
-  axios.post("http://localhost:3003/api/user/login", this.state.login)
+  apint.post("api/user/login", this.state.login)
         .then(response => {
           this.setState(state => {state.token=response.data})
           this.props.setToken(this.state.token)
